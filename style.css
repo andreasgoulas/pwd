@@ -1,0 +1,79 @@
+.form-box {
+  position: absolute;
+
+  width: 100%;
+  max-width: 300px;
+
+  left: 50%;
+  margin-left: -150px;
+
+  top: 50%;
+  margin-top: -150px;
+}
+
+.form-box .input-box {
+  border-bottom: 1px solid #CCCCCC;
+  padding-bottom: 5px;
+  margin-top: 15px;
+
+  font-size: 20px;
+}
+
+.form-box .input {
+  width: 200px;
+  border: 0;
+}
+
+.form-box .input:focus {
+  outline: none;
+}
+
+.form-box .input-number {
+  width: 50px;
+  border: 0;
+}
+
+.form-box .input-number:focus {
+  outline: none;
+}
+
+.form-box .button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  border: 0;
+
+  color: #FFFFFF;
+  background: #2e7ec7;
+
+  cursor: pointer;
+}
+
+.form-box .button:hover {
+  background: #1f6eb7;
+}
+
+.form-box .button:focus {
+  outline: none;
+}
+
+.form-box .result {
+  width: 200px;
+  font-size: 22px;
+
+  border: 0;
+}
+
+#copy {
+  vertical-align: bottom;
+  cursor: pointer;
+}
+
+#toggle-show {
+  vertical-align: bottom;
+  cursor: pointer;
+}
+
+.right {
+  float: right;
+}

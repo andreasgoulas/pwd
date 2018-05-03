@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Password</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/all.css"
+          integrity="sha384-p2jx59pefphTFIpeqCcISO9MdVfIm4pNnsL08A6v5vaQc4owkQqxMV8kg4Yvhaw/" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="pwd.js"></script>
+  </head>
+  <body>
+    <div class="form-box">
+      <div class="input-box">
+        <i class="fa fa-link"></i>
+        <input type="text" class="input" id="hostname" placeholder="Hostname"/>
+        <div class="right">
+          : <input type="number" class="input-number" id="n" min="0" value="0"/>
+        </div>
+      </div>
+      <div class="input-box">
+        <i class="fa fa-lock"></i>
+        <input type="password" class="input" id="master-pass" placeholder="Master Password"/>
+      </div>
+      <input type="button" class="button" value="Generate" onclick="run()"/>
+      <div class="input-box">
+        <input type="password" class="result" id="result" readonly/>
+        <div class="right">
+          <i id="toggle-show" class="fa fa-eye" onclick="toggleShow()"></i>
+          <i id="copy" class="fa fa-copy" onclick="copy()"></i>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -91,3 +91,9 @@ function copy() {
     }
   }
 }
+
+document.getElementById("master-pass").addEventListener("keydown", event => {
+  if (event.keyCode == 13) {
+    run();
+  }
+});

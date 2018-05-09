@@ -77,3 +77,26 @@
 .right {
   float: right;
 }
+
+@media screen and (max-width: 300px) {
+  .form-box {
+    left: 5px;
+    right: 10px;
+    margin-left: 5px;
+
+    min-width: 200px;
+    width: auto;
+  }
+
+  .form-box .input {
+    width: 120px;
+  }
+
+  .form-box .input-number {
+    width: 40px;
+  }
+
+  .form-box .result {
+    width: 120px;
+  }
+}

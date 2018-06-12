@@ -54,11 +54,19 @@ function run() {
   const masterPass = document.getElementById("master-pass").value;
   const hostname = document.getElementById("hostname").value;
   const n = document.getElementById("n").value;
-  generatePass(masterPass, hostname, n).then(function(result) {
+  generatePass(masterPass, hostname, n).then(result => {
     document.getElementById("result").value = result;
   }).catch(function(err) {
     alert(err);
   });
+
+  clear();
+}
+
+function clear() {
+  document.getElementById("master-pass").value = "";
+  document.getElementById("hostname").value = "";
+  document.getElementById("n").value = 0;
 }
 
 function toggleShow() {
@@ -78,7 +86,7 @@ function toggleShow() {
 function copy() {
   const element = document.getElementById("result");
   if (navigator.clipboard) {
-    navigator.clipboard.writeText(element.value).catch(function(err) {
+    navigator.clipboard.writeText(element.value).catch(err => {
       alert(err);
     });
   } else {
@@ -90,6 +98,8 @@ function copy() {
       alert(err);
     }
   }
+
+  element.value = "";
 }
 
 document.getElementById("master-pass").addEventListener("keydown", event => {

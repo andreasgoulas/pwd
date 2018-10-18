@@ -54,6 +54,10 @@ function run() {
   const masterPass = document.getElementById("master-pass").value;
   const hostname = document.getElementById("hostname").value;
   const n = document.getElementById("n").value;
+  if (!masterPass || !hostname || !n) {
+    return;
+  }
+
   generatePass(masterPass, hostname, n).then(result => {
     document.getElementById("result").value = result;
   }).catch(function(err) {
@@ -90,13 +94,19 @@ function copy() {
       alert(err);
     });
   } else {
+    const type = element.getAttribute("type");
+    element.setAttribute("type", "text");
     element.focus();
     element.select();
+
     try {
       document.execCommand("copy");
     } catch (err) {
+      element.value = "";
       alert(err);
     }
+
+    element.setAttribute("type", type);
   }
 
   element.value = "";

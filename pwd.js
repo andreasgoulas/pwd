@@ -1,3 +1,5 @@
+"use strict";
+
 function toBase64(buffer) {
   const array = new Uint8Array(buffer);
 

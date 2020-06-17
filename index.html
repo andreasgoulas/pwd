@@ -2,11 +2,16 @@
 <html>
   <head>
     <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self'; connect-src 'none'; form-action 'none';
+                   style-src 'self' https://use.fontawesome.com;
+                   font-src 'self' https://use.fontawesome.com"/>
     <title>Password</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/all.css"
-          integrity="sha384-p2jx59pefphTFIpeqCcISO9MdVfIm4pNnsL08A6v5vaQc4owkQqxMV8kg4Yvhaw/" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="style.css">
+          integrity="sha384-p2jx59pefphTFIpeqCcISO9MdVfIm4pNnsL08A6v5vaQc4owkQqxMV8kg4Yvhaw/"
+          crossorigin="anonymous"/>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
   </head>
   <body>
     <div class="form-box">
@@ -21,12 +26,12 @@
         <i class="fa fa-lock"></i>
         <input type="password" class="input" id="master-pass" placeholder="Master Password"/>
       </div>
-      <input type="button" class="button" value="Generate" onclick="run()"/>
+      <input type="button" class="button" id="run" value="Generate"/>
       <div class="input-box">
         <input type="password" class="result" id="result" readonly/>
         <div class="right">
-          <i id="toggle-show" class="fa fa-eye" onclick="toggleShow()"></i>
-          <i id="copy" class="fa fa-copy" onclick="copy()"></i>
+          <i id="toggle-show" class="fa fa-eye"></i>
+          <i id="copy" class="fa fa-copy"></i>
         </div>
       </div>
     </div>

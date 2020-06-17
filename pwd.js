@@ -114,8 +114,11 @@ function copy() {
   element.value = "";
 }
 
-document.getElementById("master-pass").addEventListener("keydown", event => {
+document.getElementById("run").onclick = run;
+document.getElementById("toggle-show").onclick = toggleShow;
+document.getElementById("copy").onclick = copy;
+document.getElementById("master-pass").onkeydown = event => {
   if (event.keyCode == 13) {
     run();
   }
-});
+};

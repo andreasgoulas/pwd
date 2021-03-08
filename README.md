@@ -1,5 +1,3 @@
-# structinf.com/pwd
-
 Yet another stateless password manager.
 
 The passwords are generated using the PBKDF2-HMAC-SHA256 algorithm. All
